@@ -15,11 +15,10 @@
         <div class="left">
             <i class="fas fa-bars" onclick="openNav()"></i>
         </div>
-        <div class="center">
-            Benyi Uriel Cordero Sanchez
+        <div class="center" id="nombre-toolbar">
         </div>
         <div class="right">
-            <i class="fas fa-power-off"></i>
+            <i class="fas fa-power-off" id="logout-button"></i>
         </div>
     </div>
 
@@ -28,7 +27,7 @@
     <div class="container-feed">
         <div class="contenedor-feed">
             <label for="rol-adquirido">Rol Adquirido</label>
-            <label id="rol-usuario" for="rol-usuario">ADMIN</label>
+            <label id="rol-usuario" for="rol-usuario"></label>
             <label for="ventas-hoy">Ventas hoy</label>
             <label id="total-ventas-hoy" for="total-ventas-hoy">10</label>
             <label for="total-vendido">Total Vendido</label>
@@ -39,5 +38,8 @@
     </div>
     <script src="js/loadMenu.js"></script>
     <script src="js/scriptMenu.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/feed.js"></script>
 </body>
 </html>
