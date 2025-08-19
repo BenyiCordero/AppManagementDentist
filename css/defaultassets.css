@@ -65,6 +65,35 @@
     background-color: transparent;
 }
 
+.sidebar .feed {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 35px;
+    color: #000000;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    max-width: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    display: block;
+    text-align: center;
+    cursor: pointer; 
+}
+
+.sidebar .feed:hover {
+    color: #575757;
+    background-color: transparent;
+}
+
+.sidebar .feed.active {
+    color: #000000 !important;
+    background-color: #33333300 !important;
+    cursor: default;
+}
 
 .sidebar a.active {
     color: #ccc !important;
