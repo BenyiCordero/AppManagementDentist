@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/salidas.css">
+    <link rel="stylesheet" href="css/defaultassets.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Salidas</title>
+</head>
+<body>
+    <div class="toolbar">
+        <div class="left">
+            <i class="fas fa-bars" onclick="openNav()"></i>
+        </div>
+        <div class="center">
+            Benyi Uriel Cordero Sanchez
+        </div>
+        <div class="right">
+            <i class="fas fa-power-off"></i>
+        </div>
+    </div>  
+    
+    <div id="menu-placeholder"></div>
+    <div class="container-feed">
+        <div class="header">
+            <h1>Salidas</h1>
+            <select name="empleados" id="empleados-select">
+                <option value="0">Empleados</option>
+                <option value="1">Benyi Cordero</option>
+                <option value="2">Axel Cervantes</option>
+                <option value="3">Carlos Rios</option>
+            </select>
+        </div>
+        <div class="contenedor-feed">
+            <div class="tarjet-container">
+                <h3>Salida No.1</h3>
+                <h3>Descripcion</h3>
+                <label id="descripcion">Bisturi</label>
+                <h3>Monto</h3>
+                <label id="monto">178.57</label>
+            </div>
+            <div class="tarjet-container">
+                <h3>Salida No.1</h3>
+                <h3>Descripcion</h3>
+                <label id="descripcion">Bisturi</label>
+                <h3>Monto</h3>
+                <label id="monto">178.57</label>
+            </div>
+            <div class="tarjet-container">
+                <h3>Salida No.1</h3>
+                <h3>Descripcion</h3>
+                <label id="descripcion">Bisturi</label>
+                <h3>Monto</h3>
+                <label id="monto">178.57</label>
+            </div>
+        </div>
+    </div>
+    <script src="js/loadMenu.js"></script>
+    <script src="js/scriptMenu.js"></script>
+</body>
+</html>

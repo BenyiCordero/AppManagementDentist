@@ -1,0 +1,117 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url('../assets/fondoS.jpg');
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 90px);
+}
+
+/* Título y selector */
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 45px;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4b4b4b30;
+    color: #000000;
+    padding: 15px 50px 15px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 25px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.contenedor-feed {
+    font-weight: bold;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px;
+    padding-left: 100px;
+    background-color: #4b4b4b30;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    margin-top: 30px;
+    width: 60vw;
+    max-width: 1000px;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tarjet-container {
+    font-weight: bold;
+    flex-direction: column;
+    gap: 10;
+    padding: 10px;
+    padding-left: 10px;
+    background-color: #3d3d3d40;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    margin-top: 30px;
+    width: 70vw;
+    max-width: 200px;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.container-feed {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 90px);
+}
+
+.container-feed label {
+    margin-left: 20px;
+}
+
+#monto,
+#descripcion{
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #d2d1d1e9;
+    border-radius: 20px;
+    width: 10vw;
+    height: 5vh;
+    max-width: 150px;
+}
+
