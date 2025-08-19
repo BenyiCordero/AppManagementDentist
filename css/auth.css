@@ -1,0 +1,85 @@
+body{
+    font-family: sans-serif;
+    background-image: url('../assets/fondoPrincipal.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#auth-container { 
+    background-color: #DADADA99;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center; 
+}
+
+#login-container, #register-container {
+    padding: 20px 0;
+}
+
+#login-container h2, #register-container h2 {
+    margin-top: 0;
+    color: #000000;
+}
+
+#login-container label, #register-container label {
+    color: #000000;
+}
+
+#forgot-password {
+    font-family: sans-serif;
+    margin-top: 27px;
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+#footer{
+    font-family: sans-serif;
+    color: #000000;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    text-align: left; 
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 12px);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #4B4B4B30;
+}
+
+button {
+    background-color: #4B4B4B30;
+    color: #000000;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em; 
+    margin-top: 10px; 
+    transition: background-color 0.3s ease; 
+}

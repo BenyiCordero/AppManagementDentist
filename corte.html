@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cortes.css">
+    <link rel="stylesheet" href="css/defaultassets.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Corte</title>
+</head>
+<body>
+    <div class="toolbar">
+        <div class="left">
+            <i class="fas fa-bars" onclick="openNav()"></i>
+        </div>
+        <div class="center">
+            Benyi Uriel Cordero Sanchez
+        </div>
+        <div class="right">
+            <i class="fas fa-power-off"></i>
+        </div>
+    </div>  
+    
+    <div id="menu-placeholder"></div>
+    <div class="container-feed">
+        <div class="header">
+            <h1>Corte</h1>
+            <select name="empleados" id="empleados-select">
+                <option value="0">Empleados</option>
+                <option value="1">Benyi Cordero</option>
+                <option value="2">Axel Cervantes</option>
+                <option value="3">Carlos Rios</option>
+            </select>
+        </div>
+        <div class="contenedor-feed">
+            <label>Fecha</label>
+            <label>Empleado</label>
+            <label id="fecha">23-06-2025</label>
+            <label id="empleado">Benyi Uriel Cordero Sanchez</label>
+            <label>Salidas de efectivo</label>
+            <label>Clientes atendidos</label>
+            <label id="salidas">125.78</label>
+            <label id="clientes">15</label>
+            <label>Subtotal</label>
+            <label>Total</label>
+            <label id="subtotal">13500.90</label>
+            <label id="total">13375.12</label>
+            <label>Total en tarjeta</label>
+            <label>Total en efectivo</label>
+            <label id="total-tarjeta">570.57</label>
+            <label id="total-efectivo">12804.55</label>
+        </div>
+    </div>
+    <script src="js/loadMenu.js"></script>
+    <script src="js/scriptMenu.js"></script>
+</body>
+</html>
