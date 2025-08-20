@@ -77,6 +77,7 @@ if (loginForm){
 
             if(responseData.access_token){
                 localStorage.setItem('authToken', responseData.access_token);
+                localStorage.setItem('userEmail', username);
                 if (authMessage) displayMessage(authMessage, '¡Inicio de sesion exitoso!');
                 window.location.href = 'feed.html';
             } else {
@@ -91,6 +92,7 @@ if (loginForm){
 if (logoutButton){
     logoutButton.addEventListener('click', () => {
         localStorage.removeItem('authToken');
+        localStorage.removeItem('userEmail');
         window.location.href = "index.html";
     });
 }
