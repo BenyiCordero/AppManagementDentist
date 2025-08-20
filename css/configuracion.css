@@ -87,7 +87,8 @@ body {
 #rol,
 #numero-int,
 #numero-ext,
-#telefono{
+#telefono,
+#codigo-postal{
     text-align: center;
     font-weight: bold;
     display: flex;
@@ -103,7 +104,8 @@ body {
 }
 
 #colonia,
-#calle{
+#calle,
+#correo{
     text-align: center;
     font-weight: bold;
     display: flex;
