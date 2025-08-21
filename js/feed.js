@@ -57,7 +57,7 @@ async function loadFeedData() {
 
         const totalCitaData = await responseTotalCita.json();
         const nombreCompleto = employeeData.persona.nombre +  " " + employeeData.persona.primerApe + " " + employeeData.persona.segundoApe;
-
+        localStorage.setItem('nombreLogeado', nombreCompleto);
         if (userNameElement) userNameElement.textContent = nombreCompleto;
         if (rolElement) rolElement.textContent = employeeData.rol;
         if (ventasHoyElement) ventasHoyElement.textContent = citaDetailsData.totalCitas;
