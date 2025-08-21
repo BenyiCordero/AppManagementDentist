@@ -1,11 +1,10 @@
-//js/salidas.js
-const BASE_API_URL = "http://127.0.0.1:8081";
+//js/citas.js
+const BASE_API_URL = 'http://127.0.0.1:8081';
 
+const userNameElement = document.querySelector(".toolbar .center");
 const token = localStorage.getItem('authToken');
 const select = document.getElementById('empleados-select');
-const contenedor = document.getElementById('contenedor-s')
-const userNameElement = document.querySelector(".toolbar .center");
-const nombreLogeado = localStorage.getItem('nombreLogeado');
+const contenedor = document.getElementById('contenedor-c');
 
 async function getEmpleados() {
     const EMPLEADOS_API_URL = `${BASE_API_URL}/employee`;
@@ -33,32 +32,37 @@ async function getEmpleados() {
             option.textContent = `${emp.persona.nombre} ${emp.persona.primerApe}`;
             select.appendChild(option);
         });
-        if (userNameElement) userNameElement.textContent = nombreLogeado;
+
     } catch (error){
-        console.warn("Error: " + error);
     }
 }
 
-function crearTarjetaSalida(salida, index){
+function crearBotonCita(cita, index){
     const tarjeta = document.createElement('div');
-    tarjeta.classList.add('tarjet-container');
+    tarjeta.classList.add('btn-cita');
     tarjeta.innerHTML = `
-        <h3>Salida No.${index + 1}</h3>
+        <h3>Cita No.${index + 1}</h3>
         <h3>Descripción</h3>
-        <label class="descripcion">${salida.descripcion}</label>
+        <label class="descripcion">${cita.descripcion}</label>
         <h3>Monto</h3>
-        <label class="monto">$${salida.monto.toFixed(2)}</label>
+        <label class="monto">$${cita.monto.toFixed(2)}</label>
+        <h3>Hora inicio</h3>
+        <label class="hora">${cita.horaInicio}</label>
+        <h3>Hora fin</h3>
+        <label class="hora">${cita.horaFin}</label>
+        <h3>Cliente</h3>
+        <label class="cliente">${cita.nombre + "" +cita.primerApe}</label>
     `;
 
     return tarjeta;
 }
 
-async function getSalidas(empleadoId) {
+async function getCitas(empleadoId) {
 
-    const SALIDAS_API_URL = `${BASE_API_URL}/salida/${empleadoId}`;
+    const CITAS_API_URL = `${BASE_API_URL}/appointment/citaDetails/${empleadoId}`;
 
     try {
-        const response = await fetch(SALIDAS_API_URL, {
+        const response = await fetch(CITAS_API_URL, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -67,26 +71,26 @@ async function getSalidas(empleadoId) {
         });
 
         if (!response.ok){
-            throw new Error ("No se pudieron obtener las salidas");
+            throw new Error ("No se pudieron obtener las citas");
         }
 
-        const salidas = await response.json();
+        const citas = await response.json();
 
         contenedor.innerHTML = "";
 
-        salidas.forEach((salida, index) => {
-            const tarjeta = crearTarjetaSalida(salida, index);
-            contenedor.appendChild(tarjeta);
+        citas.forEach((cita, index) => {
+            const boton = crearBotonCita(cita, index);
+            contenedor.appendChild(boton);
         });
     } catch (error){
-        console.error("Error cargando salidas:", error);
+        console.error("Error cargando citas:", error);
     }
 }
 
 select.addEventListener("change", (e) => {
     const empleadoId = e.target.value;
     if (empleadoId !== "0"){
-        getSalidas(empleadoId);
+        getCitas(empleadoId);
     }
 });
 
