@@ -93,6 +93,7 @@ if (logoutButton){
     logoutButton.addEventListener('click', () => {
         localStorage.removeItem('authToken');
         localStorage.removeItem('userEmail');
+        localStorage.removeItem('nombreLogeado');
         window.location.href = "index.html";
     });
 }
