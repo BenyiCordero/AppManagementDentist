@@ -8,6 +8,8 @@ const contenedor = document.getElementById('contenedor-c');
 
 async function getEmpleados() {
     const EMPLEADOS_API_URL = `${BASE_API_URL}/employee`;
+    const nombreLogeado = localStorage.getItem('nombreLogeado');
+    if (userNameElement) userNameElement.textContent = nombreLogeado;
 
     try {
         const responseData = await fetch(EMPLEADOS_API_URL, {
