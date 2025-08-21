@@ -58,7 +58,6 @@ async function loadFeedData() {
         const totalCitaData = await responseTotalCita.json();
         const nombreCompleto = employeeData.persona.nombre +  " " + employeeData.persona.primerApe + " " + employeeData.persona.segundoApe;
         localStorage.setItem('nombreLogeado', nombreCompleto);
-        if (userNameElement) userNameElement.textContent = nombreCompleto;
         if (rolElement) rolElement.textContent = employeeData.rol;
         if (ventasHoyElement) ventasHoyElement.textContent = citaDetailsData.totalCitas;
         if (fechaElement) fechaElement.textContent = citaDetailsData.fechaHoy;
@@ -66,8 +65,9 @@ async function loadFeedData() {
 
 
     } catch (error){
-        window.location.href = "index.html";
+        console.warn(error);
     }
+    if (userNameElement) userNameElement.textContent = localStorage.getItem('nombreLogeado');
 }
 
 document.addEventListener("DOMContentLoaded", loadFeedData);

@@ -54,7 +54,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.contenedor-feed {
+.contenedor-salidas {
     font-weight: bold;
     display: grid;
     flex-direction: column;
@@ -99,8 +99,8 @@ body {
     margin-left: 20px;
 }
 
-#monto,
-#descripcion{
+.monto,
+.descripcion{
     text-align: center;
     font-weight: bold;
     display: flex;
