@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/agendarCita.css" />
     <link rel="stylesheet" href="css/defaultassets.css">
     <link
     rel="stylesheet"
@@ -16,9 +16,7 @@
         <div class="left">
             <i class="fas fa-bars" onclick="openNav()"></i>
         </div>
-        <div class="center">
-            Benyi Uriel Cordero Sanchez
-        </div>
+        <div class="center"></div>
         <div class="right">
             <i class="fas fa-power-off" id="logout-button"></i>
         </div>
@@ -28,37 +26,53 @@
 
     <div class="container">
         <div class="header">
-        <h1>Agendar Cita</h1>
-        <select name="empleados" id="empleados-select">
-        <option value="0">Empleados</option>
-            <option value="1">Benyi Cordero</option>
-            <option value="2">Axel Cervantes</option>
-            <option value="3">Carlos Rios</option>
-        </select>
+            <h1>Agendar Cita</h1>
+            <select name="empleados" id="empleados-select">
+                <option value="0">Empleados</option>
+            </select>
         </div>
 
         <div class="container-agendar">
-            <div class="contenedor-agendar">
-                <label for="descripcion">Descripción</label>
-                <label for="hora-inicio">Hora de inicio</label>
-                <label for="fecha">Fecha</label>
-                <label id="descripcion" for="descripcion-brackets">Poner Brackets</label>
-                <label id="hora-inicio" for="hora-inicio-10">10:00:00</label>
-                <label id="fecha-hoy" for="fecha-hoy">24-06-2025</label>
-                <label for="monto">Monto</label>
-                <label for="hora-termino">Hora de termino</label>
-                <label for="cliente">Cliente</label>
-                <label id="monto" for="monto-verdad">1524</label>
-                <label id="hora-termino" for="hora-termino-11">11:00:00</label>
-                <label id="cliente" for="cliente-cita">Bryan Axel</label>
-                <label for=""></label>
-                <button type="button">Agregar Cliente</button>
-                <button type="button">Agendar</button>
-            </div>
+            <form class="contenedor-agendar">
+                <div class="campo">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" id="descripcion" name="descripcion" placeholder="Ej. Poner brackets">
+                </div>
+
+                <div class="campo">
+                    <label for="hora-inicio">Hora de inicio</label>
+                    <input type="time" id="hora-inicio" name="hora-inicio">
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+
+                <div class="campo">
+                    <label for="monto">Monto</label>
+                    <input type="number" id="monto" name="monto" placeholder="0">
+                </div>
+
+                <div class="campo">
+                    <label for="hora-termino">Hora de término</label>
+                    <input type="time" id="hora-termino" name="hora-termino">
+                </div>
+
+                <div class="campo">
+                    <label for="cliente">Cliente</label>
+                    <input type="text" id="cliente" name="cliente" placeholder="Nombre del cliente">
+                </div>
+
+                <button type="button" id="agregar-btn">Agregar Cliente</button>
+                <button type="submit" id="agendar-btn">Agendar</button>
+            </form>
         </div>
+
     </div>
     <script src="js/loadMenu.js"></script>
     <script src="js/scriptMenu.js"></script>
     <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/agendarCita.js"></script>
 </body>
 </html>

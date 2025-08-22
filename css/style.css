@@ -6,7 +6,6 @@ body {
     min-height: 100vh;
 }
 
-/* Contenedor principal */
 .container {
     display: flex;
     flex-direction: column;
