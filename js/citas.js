@@ -5,6 +5,7 @@ const userNameElement = document.querySelector(".toolbar .center");
 const token = localStorage.getItem('authToken');
 const select = document.getElementById('empleados-select');
 const contenedor = document.getElementById('contenedor-c');
+const agendarCitaBtn = document.getElementById('citas-btn');
 
 async function getEmpleados() {
     const EMPLEADOS_API_URL = `${BASE_API_URL}/employee`;
@@ -95,6 +96,10 @@ select.addEventListener("change", (e) => {
         getCitas(empleadoId);
     }
 });
+
+agendarCitaBtn.onclick = ()=> {
+    window.location.href = "agendarCita.html";
+};
 
 document.addEventListener("DOMContentLoaded", () => {
     if (!token) {

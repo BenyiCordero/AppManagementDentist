@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/defaultassets.css">
+    <link rel="stylesheet" href="css/agregarCliente.css" />
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -33,30 +34,57 @@
         </div>
 
         <div class="container-agendar">
-            <div class="contenedor-agendar">
-                <label for="nombre">Nombre</label>
-                <label for="primer-ape">Primer Apellido</label>
-                <label for="segundo-ape">Segundo Apellido</label>
-                <label id="nombre" for="nombre-txt">Bryan Axel</label>
-                <label id="primer-ape" for="hora-inicio-10">Cervantes</label>
-                <label id="segundo-ape" for="fecha-hoy">Partida</label>
-                <label for="telefono">Telefono</label>
-                <label for="calle">Calle</label>
-                <label for="colonia">Colonia</label>
-                <label id="telefono" for="telefono">4761811897</label>
-                <label id="calle" for="calle">Agustín Melgar</label>
-                <label id="colonia" for="colonia">Avante</label>
-                <label for="numero-ext">Numero exterior</label>
-                <label for="numero-interior">Numero interior</label>
-                <label for="codigo-postal">Codigo postal</label>
-                <label id="numero-ext" for="numero-exterior-v">151</label>
-                <label id="numero-interior" for="numero-interior-v">15</label>
-                <label id="codigo-postal" for="codigo-postal-v">36402</label>
-                <label for=""></label><label for=""></label>
-                <button type="button">Agregar</button>
+            <div class="container-agendar">
+                <form class="contenedor-agendar">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre del Cliente">
+                    </div>
+
+                    <div class="campo">
+                        <label for="primer-ape">Primer Apellido</label>
+                        <input type="text" id="primer-ape" name="primer-ape" placeholder="Primer Apellido">
+                    </div>
+
+                    <div class="campo">
+                        <label for="segundo-ape">Segundo Apellido</label>
+                        <input type="text" id="segundo-ape" name="segundo-ape" placeholder="Segundo Apellido">
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej:4761811897">
+                    </div>
+
+                    <div class="campo">
+                        <label for="calle">Calle</label>
+                        <input type="text" id="calle" name="calle" placeholder="Calle">
+                    </div>
+
+                    <div class="campo">
+                        <label for="colonia">Colonia</label>
+                        <input type="text" id="colonia" name="colonia" placeholder="Colonia">
+                    </div>
+
+                    <div class="campo">
+                        <label for="numero-ext">Número Exterior</label>
+                        <input type="number" id="numero-ext" name="numero-ext" placeholder="Ej:151">
+                    </div>
+
+                    <div class="campo">
+                        <label for="numero-interior">Número Interior</label>
+                        <input type="number" id="numero-interior" name="numero-interior" placeholder="Ej:15A">
+                    </div>
+
+                    <div class="campo">
+                        <label for="codigo-postal">Código Postal</label>
+                        <input type="number" id="codigo-postal" name="codigo-postal" placeholder="Ej:36402">
+                    </div>
+
+                    <button type="submit">Agregar</button>
+                </form>
             </div>
         </div>
-    </div>
     <script src="js/loadMenu.js"></script>
     <script src="js/scriptMenu.js"></script>
     <script type="module" src="js/auth.js"></script>
