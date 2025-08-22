@@ -33,7 +33,7 @@
 
         <div class="container-agendar">
             <div class="container-agendar">
-                <form class="contenedor-agendar">
+                <form class="contenedor-agendar" id="client-form">
                     <div class="campo">
                         <label for="nombre">Nombre</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre del Cliente">
@@ -41,12 +41,12 @@
 
                     <div class="campo">
                         <label for="primer-ape">Primer Apellido</label>
-                        <input type="text" id="primer-ape" name="primer-ape" placeholder="Primer Apellido">
+                        <input type="text" id="primer" name="primer-ape" placeholder="Primer Apellido">
                     </div>
 
                     <div class="campo">
                         <label for="segundo-ape">Segundo Apellido</label>
-                        <input type="text" id="segundo-ape" name="segundo-ape" placeholder="Segundo Apellido">
+                        <input type="text" id="segundo" name="segundo-ape" placeholder="Segundo Apellido">
                     </div>
 
                     <div class="campo">
@@ -66,25 +66,26 @@
 
                     <div class="campo">
                         <label for="numero-ext">Número Exterior</label>
-                        <input type="number" id="numero-ext" name="numero-ext" placeholder="Ej:151">
+                        <input type="number" id="numero" name="numero-ext" placeholder="Ej:151">
                     </div>
 
                     <div class="campo">
                         <label for="numero-interior">Número Interior</label>
-                        <input type="number" id="numero-interior" name="numero-interior" placeholder="Ej:15A">
+                        <input type="number" id="numeroi" name="numero-interior" placeholder="Ej:15A">
                     </div>
 
                     <div class="campo">
                         <label for="codigo-postal">Código Postal</label>
-                        <input type="number" id="codigo-postal" name="codigo-postal" placeholder="Ej:36402">
+                        <input type="number" id="codigo" name="codigo-postal" placeholder="Ej:36402">
                     </div>
 
-                    <button type="submit">Agregar</button>
+                    <button type="submit" id="agregar-cliente">Agregar</button>
                 </form>
             </div>
         </div>
     <script src="js/loadMenu.js"></script>
     <script src="js/scriptMenu.js"></script>
     <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/agregarCliente.js"></script>
 </body>
 </html>
