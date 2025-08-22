@@ -16,9 +16,7 @@
         <div class="left">
             <i class="fas fa-bars" onclick="openNav()"></i>
         </div>
-        <div class="center">
-            Benyi Uriel Cordero Sanchez
-        </div>
+        <div class="center"></div>
         <div class="right">
             <i class="fas fa-power-off" id="logout-button"></i>
         </div>
@@ -31,9 +29,6 @@
             <h1>Agendar Cita</h1>
             <select name="empleados" id="empleados-select">
                 <option value="0">Empleados</option>
-                <option value="1">Benyi Cordero</option>
-                <option value="2">Axel Cervantes</option>
-                <option value="3">Carlos Rios</option>
             </select>
         </div>
 
@@ -69,8 +64,8 @@
                     <input type="text" id="cliente" name="cliente" placeholder="Nombre del cliente">
                 </div>
 
-                <button type="button">Agregar Cliente</button>
-                <button type="submit">Agendar</button>
+                <button type="button" id="agregar-btn">Agregar Cliente</button>
+                <button type="submit" id="agendar-btn">Agendar</button>
             </form>
         </div>
 
@@ -78,5 +73,6 @@
     <script src="js/loadMenu.js"></script>
     <script src="js/scriptMenu.js"></script>
     <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/agendarCita.js"></script>
 </body>
 </html>
