@@ -16,6 +16,8 @@ const select = document.getElementById('empleados-select');
 
 async function getEmpleados() {
     const EMPLEADOS_API_URL = `${BASE_API_URL}/employee`;
+    const nombreLogeado = localStorage.getItem('nombreLogeado');
+    if (userNameElement) userNameElement.textContent = nombreLogeado;
 
     try {
         const responseData = await fetch(EMPLEADOS_API_URL, {
@@ -75,7 +77,6 @@ async function loadCorteData(empleadoId) {
         const totalTransferencia = corteData.totalTransferencia;
         const totalEfectivo = total - totalTarjeta - totalTransferencia;
 
-        if (userNameElement) userNameElement.textContent = nombreLogeado;
         if (fechaElement) fechaElement.textContent = corteData.fecha;
         if (empleadoElement) empleadoElement.textContent = nombreCompleto;
         if (salidasElement) salidasElement.textContent = "$" + salidas.toFixed(2);

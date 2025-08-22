@@ -17,9 +17,7 @@
         <div class="left">
             <i class="fas fa-bars" onclick="openNav()"></i>
         </div>
-        <div class="center">
-            
-        </div>
+        <div class="center"></div>
         <div class="right">
             <i class="fas fa-power-off" id="logout-button"></i>
         </div>
@@ -29,19 +27,80 @@
 
     <div class="container-feed">
         <div class="contenedor-feed">
-            <label for="rol-adquirido">Rol Adquirido</label>
-            <label id="rol-usuario" for="rol-usuario"></label>
-            <label for="ventas-hoy">Ventas hoy</label>
-            <label id="total-ventas-hoy" for="total-ventas-hoy"></label>
-            <label for="total-vendido">Total Vendido</label>
-            <label id="total-vendido-hoy" for="total-vendido-hoy"></label>
-            <label for="fecha-hoy">Fecha</label>
-            <label id="fecha" for="fecha"></label>
+            <div class="datos-feed">
+                <label for="rol-adquirido">Rol Adquirido</label>
+                <label id="rol-usuario" for="rol-usuario"></label>
+
+                <label for="ventas-hoy">Ventas hoy</label>
+                <label id="total-ventas-hoy" for="total-ventas-hoy"></label>
+
+                <label for="total-vendido">Total Vendido</label>
+                <label id="total-vendido-hoy" for="total-vendido-hoy"></label>
+
+                <label for="fecha-hoy">Fecha</label>
+                <label id="fecha" for="fecha"></label>
+            </div>
+
+            <div class="board">
+                <div class="titulo_grafica">
+                    <h3 class="t_grafica">Título del Gráfico</h3>
+                </div>
+                <div class="sub_board">
+                    <div class="sep_board"></div>
+                    <div class="cont_board">
+                        <div class="graf_board">
+                            <div class="barra">
+                                <div class="sub_barra b1">
+                                    <div class="tag_g">35%</div>
+                                    <div class="tag_leyenda">día 1</div>
+                                </div>
+                            </div>
+                            <div class="barra">
+                                <div class="sub_barra b2">
+                                    <div class="tag_g">45%</div>
+                                    <div class="tag_leyenda">día 2</div>
+                                </div>
+                            </div>
+                            <div class="barra">
+                                <div class="sub_barra b3">
+                                    <div class="tag_g">55%</div>
+                                    <div class="tag_leyenda">día 3</div>
+                                </div>
+                            </div>
+                            <div class="barra">
+                                <div class="sub_barra b4">
+                                    <div class="tag_g">75%</div>
+                                    <div class="tag_leyenda">día 4</div>
+                                </div>
+                            </div>
+                            <div class="barra">
+                                <div class="sub_barra b5">
+                                    <div class="tag_g">85%</div>
+                                    <div class="tag_leyenda">día 5</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tag_board">
+                            <div class="sub_tag_board">
+                                <div>5</div>
+                                <div>4</div>
+                                <div>3</div>
+                                <div>2</div>
+                                <div>1</div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="sep_board"></div>
+                </div>    
+            </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/loadMenu.js"></script>
     <script src="js/scriptMenu.js"></script>
     <script type="module" src="js/auth.js"></script>
     <script type="module" src="js/feed.js"></script>
+    <script src="js/chartFeed.js"></script>
 </body>
 </html>

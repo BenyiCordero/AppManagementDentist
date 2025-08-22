@@ -23,6 +23,28 @@ body {
     position: relative;
 }
 
+.agendar-btn {
+    font-weight: bold;
+    padding: 12px 25px;
+    background-color: #3d3d3d40;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.agendar-btn:hover {
+    background-color: #4b4b4b60;  
+    border-color: #8f8e8e;        
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50%) scale(1.05);
+}
+
 .header h1 {
     font-size: 45px;
     margin: 0;
@@ -52,6 +74,13 @@ body {
     background-position: right 15px center;
     background-size: 18px;
     transition: background-color 0.3s ease;
+}
+
+.header select:hover {
+    background-color: #4b4b4b60;  
+    border-color: #8f8e8e;        
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50%) scale(1.05);
 }
 
 .contenedor-citas {
