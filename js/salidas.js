@@ -6,6 +6,7 @@ const select = document.getElementById('empleados-select');
 const contenedor = document.getElementById('contenedor-s')
 const userNameElement = document.querySelector(".toolbar .center");
 const nombreLogeado = localStorage.getItem('nombreLogeado');
+const salidasBtn = document.getElementById('salidas-btn');
 
 async function getEmpleados() {
     const EMPLEADOS_API_URL = `${BASE_API_URL}/employee`;
@@ -82,6 +83,10 @@ async function getSalidas(empleadoId) {
         console.error("Error cargando salidas:", error);
     }
 }
+
+salidasBtn.onclick = () => {
+    window.location.href = "agregarSalida.html";
+};
 
 select.addEventListener("change", (e) => {
     const empleadoId = e.target.value;
