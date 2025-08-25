@@ -68,9 +68,8 @@ async function loadCorteData(empleadoId) {
 
         const corteData = await responseData.json();
 
-        const nombreLogeado = localStorage.getItem('nombreLogeado');
         const nombreCompleto = corteData.nombre +  " " + corteData.primerApe + " " + corteData.segundoApe;
-        const subtotal = corteData.totalEfectivo;
+        const subtotal = corteData.totalEfectivo + corteData.totalTarjeta + corteData.totalTransferencia;
         const salidas = corteData.totalSalidas;
         const total = subtotal - salidas;
         const totalTarjeta = corteData.totalTarjeta;
