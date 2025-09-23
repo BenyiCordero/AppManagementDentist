@@ -13,6 +13,7 @@ const totalEfectivoElement = document.getElementById('total-efectivo');
 const totalTransferenciaElement = document.getElementById('total-transferencia');
 const token = localStorage.getItem('authToken');
 const select = document.getElementById('empleados-select');
+const corteBtn = document.querySelector(".corte-btn");
 
 async function getEmpleados() {
     const EMPLEADOS_API_URL = `${BASE_API_URL}/employee`;
@@ -89,6 +90,42 @@ async function loadCorteData(empleadoId) {
     } catch (error){
     }
 }
+
+corteBtn.addEventListener("click", async () => {
+    try {
+        const corteData = {
+            fecha: new Date().toISOString().split("T")[0],
+            subtotal: parseFloat(document.getElementById("subtotal").textContent.replace("$","")),
+            total: parseFloat(document.getElementById("total").textContent.replace("$","")),
+            idEmpleado: parseInt(document.getElementById("empleados-select").value),
+            salidas: [
+                { id: 1 }, 
+                { id: 2 }, 
+                { id: 3 }
+            ],
+            totalEfectivo: parseFloat(document.getElementById("total-efectivo").textContent.replace("$","")),
+            totalTarjeta: parseFloat(document.getElementById("total-tarjeta").textContent.replace("$","")),
+            totalTransferencia: parseFloat(document.getElementById("total-transferencia").textContent.replace("$",""))
+        };
+
+        const response = await fetch(`${BASE_API_URL}/corte`, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corteData)
+        });
+
+        if (!response.ok) throw new Error("Error al guardar el corte");
+
+        const result = await response.json();
+        console.log("Corte guardado:", result);
+
+    } catch(error) {
+        console.error("Error:", error);
+    }
+});
 
 select.addEventListener("change", (e) => {
     const empleadoId = e.target.value;
